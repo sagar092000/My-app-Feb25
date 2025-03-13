@@ -1,0 +1,11 @@
+.background{
+    background-color: rgb(184, 19, 230);
+    height:250px;
+    width:300px;
+    margin-top: 60px;
+    margin-left:350px ;
+    border-radius: 10px;
+    text-align: center;
+    padding:30px;
+
+}

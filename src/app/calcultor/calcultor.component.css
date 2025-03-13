@@ -1,0 +1,20 @@
+.background{
+    background-color: rgb(179, 147, 208);
+    width:300px;
+    height:250px;
+    text-align: center;
+    margin-top:50px;
+    margin-left: 300px;
+    padding:50px;
+    border-radius: 5px;
+}
+
+.button{
+    background-color: rgb(76, 76, 74);
+    width:50px;
+    height:30px;
+    color:white;
+    border-radius: 2px;
+    margin-left: 4px;
+}
+

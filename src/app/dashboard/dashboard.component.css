@@ -1,0 +1,32 @@
+.parent{
+   height:100vh;
+   width:100vw;
+   display: flex;
+   gap:2px;
+  margin:0px; 
+  border-width: 2px white;
+}
+
+.left{
+    width:20%;
+    height:97%;
+    background-color: rgb(214, 219, 219);padding:10px; text-align: center;
+    overflow: auto;
+}
+.right{
+    height:100%;
+    width:100%;
+    background-color: bisque;
+    gap:1px;
+    overflow: auto;
+
+}
+
+.button{
+    height:30px;
+    width:100px ;
+    background-color: rgb(225, 18, 18);
+    color:white;
+    border: none;
+    border-radius: 3px;padding:3px;
+}

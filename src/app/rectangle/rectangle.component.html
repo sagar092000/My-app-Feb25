@@ -1,0 +1,11 @@
+<div class="background">
+    
+    <label style="font-weight: bold;">Length:</label><br>
+    <input type="number" style="height:25px;margin-bottom: 5px;cursor: pointer;" [(ngModel)]="num1"><br>
+    <label style="font-weight: bold;">Width:</label><br>
+    <input type="number" style="height:25px;cursor: pointer;" [(ngModel)]="num2"><br><br>
+
+    <button class="button" (click)="Area()" [disabled]="!num1 || !num2">Area</button><br><br>
+    <button class="button" (click)="Perimeter()" [disabled]="!num1 || !num2">Peri-meter</button><br><br>
+    <label style="font-weight: bold;">Area:{{areas}},Peri-meter:{{perimeters}}</label>
+</div>

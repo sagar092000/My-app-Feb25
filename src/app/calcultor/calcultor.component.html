@@ -1,0 +1,18 @@
+
+<div class="background">
+<h3>{{result}}</h3>
+<label style="font-weight: bold;">Number1:</label><br>
+<input type="number" style="height:25px" [(ngModel)]="num1" ><br><br>
+<label style="font-weight: bold;">Number2:</label><br>
+<input type="number" style="height:25px"[(ngModel)]="num2">
+<br><br>
+
+<button class="button" (click)="Add()" [disabled]="!num1 || !num2">Add</button>
+
+
+<button class="button" (click)="Sub()" [disabled]="!num1 || !num2" >Sub</button>
+
+<button class="button" (click)="Mul()" [disabled]="!num1 || !num2">Mul</button>
+
+<button class="button" (click)="Div()" [disabled]="!num1 || !num2">Div</button>
+</div>

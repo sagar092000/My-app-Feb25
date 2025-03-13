@@ -1,0 +1,11 @@
+.background{
+    background-color: aliceblue;
+
+    height:300px;
+    width:350px;
+    text-align: center;
+    margin-left: 350px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding:40px;
+}
