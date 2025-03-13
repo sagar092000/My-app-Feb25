@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { SiginComponent } from './sigin/sigin.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CelFaComponent } from './cel-fa/cel-fa.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,children:[
@@ -23,7 +24,8 @@ const routes: Routes = [
     {path:'home',component:HomeComponent},
     {path:'sigin',component:SiginComponent},
     {path:'data-binding',component:DataBindingComponent},
-    {path:'cel-fa',component:CelFaComponent}
+    {path:'cel-fa',component:CelFaComponent},
+    {path:'directives',component:DirectivesComponent}
   ]},// parent routing
   
   {path:'',component:LoginComponent}, // default routing

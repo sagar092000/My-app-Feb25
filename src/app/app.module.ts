@@ -16,6 +16,7 @@ import { SiginComponent } from './sigin/sigin.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { CelFaComponent } from './cel-fa/cel-fa.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CelFaComponent } from './cel-fa/cel-fa.component';
     HomeComponent,
     SiginComponent,
     DataBindingComponent,
-    CelFaComponent
+    CelFaComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

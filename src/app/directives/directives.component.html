@@ -1,0 +1,42 @@
+<h1>Productes</h1>
+
+<table border="2px" [cellPadding]="10" [cellSpacing]="0">
+    <thead >
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productes">
+            <td>{{product.name}}</td>
+            <!-- <td [ngStyle]="{color:product.price<2000?'blue':'red'}">{{product.price}}<td> -->
+            <td [ngStyle]="{color:product.price<2000?'blue':'red'}">{{product.price }}</td>
+            <td [ngClass]="{'green':product.rating >4,'red':product.rating <4,'yellow':product.rating>2&&product.rating<4}">{{product.rating}}</td>
+        </tr>
+
+
+    </tbody>
+</table>
+
+<ol>
+    <li *ngFor="let state of states">{{state}}</li>
+</ol>
+
+
+
+
+
+<select>
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+
+<p *ngIf="isVisible">Welcome to Angular Topics Deritives </p>
+<p *ngIf="!isVisible"> Thank u for joining  </p>
+
+<ul>
+    <li *ngFor="let state of states">{{state}}</li>
+</ul>
+
+<h1>{{newDate |date:'yyyy-MM-dd'}}</h1>
