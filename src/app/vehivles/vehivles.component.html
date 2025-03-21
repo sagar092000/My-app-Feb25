@@ -1,0 +1,63 @@
+<h1>Vechile</h1>
+
+<input type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="Enter the data to filter"><br>
+
+<select [(ngModel)]="column">
+    <option>vehicle</option>        
+    <option>cost</option>
+    <option>fuel</option>
+    <option>color</option>     
+</select>
+
+<select [(ngModel)]="order" >
+<option>asc</option>
+<option>desc</option>
+</select>
+
+<button (click)="sort()" style="margin-left: 5px;">sort</button><br>
+
+<select [(ngModel)]="limit">
+    <option>10</option>        
+    <option>20</option>
+    <option>30</option>  
+</select>
+
+<select [(ngModel)]="page" >
+    <option>1</option>        
+    <option>2</option>
+    <option>3</option>  
+</select>
+
+<button (click)="pagination()" style="margin-left: 5px;">Pagination</button>
+
+<button routerLink="/dashboard/create-vechicle" class="btn btn-primary">CreatNew</button>
+
+<table border="2" [cellPadding]="5" [cellSpacing]="0" class="table table-striped">
+    <thead >
+        <tr>
+            <th>S.NO</th>
+            <th>Vehicle Name</th>
+            <th>Manufacture</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Cost</th>
+            <th>Fuel</th>
+            <th>Model</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody >
+        <tr *ngFor="let vechile of vehicles, let i=index ">
+            <td>{{i+1}}</td>
+            <td>{{vechile.Vehicle}}</td>
+            <td>{{vechile.manufacturer}}</td>
+            <td>{{vechile.type}}</td>
+            <td>{{vechile.color}}</td>
+            <td>{{vechile.cost}}</td>
+            <td>{{vechile.fuel}}</td>
+            <td>{{vechile.model}}</td>
+            <td><button style="background-color:red;color:white;border:none;" (click)="delete(vechile.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -14,9 +14,18 @@ import { BmiComponent } from './bmi/bmi.component';
 import { HomeComponent } from './home/home.component';
 import { SiginComponent } from './sigin/sigin.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CelFaComponent } from './cel-fa/cel-fa.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { HttpClientModule } from '@angular/common/http';
+import { VehivlesComponent } from './vehivles/vehivles.component';
+import { FlipkartApiComponent } from './flipkart-api/flipkart-api.component';
+import { CreateVechicleComponent } from './create-vechicle/create-vechicle.component';
+import { StudentCardsComponent } from './student-cards/student-cards.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +42,22 @@ import { DirectivesComponent } from './directives/directives.component';
     SiginComponent,
     DataBindingComponent,
     CelFaComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    EmployeeComponent,
+    FlipkartComponent,
+    AccountsComponent,
+    VehivlesComponent,
+    FlipkartApiComponent,
+    CreateVechicleComponent,
+    StudentCardsComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

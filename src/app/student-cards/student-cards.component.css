@@ -1,0 +1,13 @@
+.parent{
+    background-color: azure;
+    height:250px;
+    width:400px;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    overflow: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: small;
+    
+}
