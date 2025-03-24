@@ -12,7 +12,7 @@ export class VehivlesComponent {
   vehicles:any=[]
   term:string='';
 constructor(private service:VehicleService){
-  service.getData().subscribe((data:any)=>{
+  service.getVechile().subscribe((data:any)=>{
     console.log(data);
     this.vehicles=data;
     console.log(this.vehicles);

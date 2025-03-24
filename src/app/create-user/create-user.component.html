@@ -1,6 +1,13 @@
 <form [formGroup]="userForm">
   <label for="">Name:</label>
   <input type="text" formControlName="name"><br>
+
+ 
+  <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
+    <p *ngIf="userForm.get('name')?.errors?.['required']">Name Is Required</p>
+    <p *ngIf="userForm.get('name')?.errors?.['minlength']">Name Should be mininum 6 Characters</p>
+    <p *ngIf="userForm.get('name')?.errors?.['maxlength']">Name Should be maximum 6 Characters</p>
+  </div>
   <label for="">Email:</label>
   <input type="text"  formControlName="email"><br>
   <label for="">Password:</label>
@@ -34,5 +41,26 @@
     <input type="number" formControlName="hostelFee"><br>
   </div>
   
+
+   <label>Cards:</label>
+   <button (click)="addcard()" class="btn btn-warning">Add card</button><br><br>
+
+   <div formArrayName="cards">
+    <div *ngFor="let card of cardsFromArray.controls;let i=index">
+      <div formGroupName="{{i}}">
+        <h2>card{{i+1}}</h2>
+        <label for="">Number:</label>
+        <input type="number" formControlName="number"><br>
+        <label for="">Expiry:</label>
+        <input type="month" formControlName="expiry"><br>
+        <label for="">CVV:</label>
+        <input type="number" formControlName="cvv"><br>
+
+        <button (click)="deletecard(i)" class="btn btn-danger">remove Card</button>
+
+      </div>
+    </div>
+   </div>
+
   <button (click)="submit()">Submit</button>
 </form>

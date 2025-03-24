@@ -1,6 +1,33 @@
-<div class="parent">
-   <div style="background-color: rgb(39, 169, 156);">
-    <h4>C.K.G HIGH SCHOOL</h4> 
-    <p>(CBSE AFFILITED)<br>Guntur,Guntur(dt),pin 522233</p>
+<div id="main">
+<div class="parent" *ngFor="let Students of student">
+   <div class="top">
+      <img  class="img1"  [src]="Students.school_logo" alt="">
+      <h6>School name:{{Students.school_name | slice:0:50}}</h6>
    </div>
+
+   <div class="middle">
+     <div class="m-left" >
+      <label for=""><b>Name:</b>{{Students.name }}</label><br>
+      <label for=""><b>PHONE:</b>{{Students.phone}}</label><br>
+      <label for=""><b>DOB:</b>{{Students.dob}}</label><br>
+      <label for=""><b>CITY:</b>{{Students.city}}</label><br>
+      <label for=""><b>EMAIL:</b>{{Students.email}}</label>
+     </div>
+     <div class="m-right">
+      <img class="img2" [src]="Students.profile_picture" alt="">
+     </div>
+   </div>
+   <div class="bottom">
+      <div class="text">
+      <label for="" ><b>School City:</b>{{Students.school_city}}</label>
+      <label for="" ><b>School Pin:</b>{{Students.school_pin}}</label>
+      </div>
+      <div class="button">
+         <button class="btn btn-primary">View</button>
+         <button class="btn btn-info">Edit</button>
+         <button class="btn btn-danger">Delete</button>
+      </div>
+   </div>
+
+</div>
 </div>

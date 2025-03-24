@@ -14,13 +14,14 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CelFaComponent } from './cel-fa/cel-fa.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
-import { FlipkartComponent } from './flipkart/flipkart.component';
+
 import { AccountsComponent } from './accounts/accounts.component';
 import { VehivlesComponent } from './vehivles/vehivles.component';
 import { FlipkartApiComponent } from './flipkart-api/flipkart-api.component';
 import { CreateVechicleComponent } from './create-vechicle/create-vechicle.component';
 import { StudentCardsComponent } from './student-cards/student-cards.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+
 
 const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,children:[
@@ -35,13 +36,14 @@ const routes: Routes = [
     {path:'cel-fa',component:CelFaComponent},
     {path:'directives',component:DirectivesComponent},
     {path:'employee',component:EmployeeComponent},
-    {path:'flipkart',component:FlipkartComponent},
+    
     {path:'accounts',component:AccountsComponent},
     {path:'vechiles',component:VehivlesComponent},
     {path:'flipkart-api',component:FlipkartApiComponent},
     {path:'create-vechicle',component:CreateVechicleComponent},
     {path:'student-card',component:StudentCardsComponent},
-    {path:'create-user',component:CreateUserComponent}
+    {path:'create-user',component:CreateUserComponent},
+   
   
   ]},// parent routing
   
