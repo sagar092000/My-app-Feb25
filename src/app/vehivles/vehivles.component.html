@@ -43,6 +43,7 @@
             <th>Cost</th>
             <th>Fuel</th>
             <th>Model</th>
+            <th>View</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -57,7 +58,12 @@
             <td>{{vechile.cost}}</td>
             <td>{{vechile.fuel}}</td>
             <td>{{vechile.model}}</td>
-            <td><button style="background-color:red;color:white;border:none;" (click)="delete(vechile.id)">Delete</button></td>
+
+
+            <td>
+                <button routerLink="/dashboard/vehicle-details/{{vechile.id}}" class="btn btn-primary">View</button>
+            </td>
+            <td><button class="btn btn-danger" (click)="delete(vechile.id)">Delete</button></td>
         </tr>
     </tbody>
 </table>

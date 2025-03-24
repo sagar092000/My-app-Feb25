@@ -21,6 +21,7 @@ import { FlipkartApiComponent } from './flipkart-api/flipkart-api.component';
 import { CreateVechicleComponent } from './create-vechicle/create-vechicle.component';
 import { StudentCardsComponent } from './student-cards/student-cards.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 
 const routes: Routes = [
@@ -43,6 +44,7 @@ const routes: Routes = [
     {path:'create-vechicle',component:CreateVechicleComponent},
     {path:'student-card',component:StudentCardsComponent},
     {path:'create-user',component:CreateUserComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
    
   
   ]},// parent routing
