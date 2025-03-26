@@ -1,7 +1,12 @@
 <div class="parent">
     <div class="container" *ngFor="let Flipkart of flipkartdata">
         <div class="top">
-            <img src="{{Flipkart.image}}" alt="">
+            <div class="top_1">
+            <img src="{{Flipkart.image}}" alt=""> 
+        </div>
+            <div class="top_2">
+                <app-rating [rating]="Flipkart.rating?.rate" ></app-rating>
+            </div>
         </div>
         <div class="bottom" style="text-align: center;color:aliceblue;">
             <span style="font-weight:bold;font-size:larger;font-style: italic;color: black;">{{Flipkart.category}}</span><br>

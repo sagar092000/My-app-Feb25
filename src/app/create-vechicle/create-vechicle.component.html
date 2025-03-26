@@ -1,4 +1,9 @@
-<form action="" [formGroup]="vechileForm">
+<h1 *ngIf="!id">Create Vechile</h1>
+<h1 *ngIf="id">Update Vechile</h1>
+
+
+<!-- <h1>{{id?'Update Vechile':'Create Vechile'}}</h1> using this condition is same -->
+<form action="" [formGroup] ="vehicleForm">
     <label for="">Vehicle Name:</label>
     <input type="text" formControlName="Vehicle"><br>
     <label for="">Color:</label>
@@ -7,7 +12,7 @@
     <input type="number" formControlName="cost"><br>
     <label for="">Fuel:</label>
     <input type="text" formControlName="fuel"><br>
-    <label for="">Image:</label>
+    <!-- <label for="">Image:</label>
     <input type="text">
     <label for=""></label><br>
     <input type="text">
@@ -17,8 +22,8 @@
     <input type="text">
     <label for=""></label><br>
     <input type="text">
-    <label for=""></label><br>
-    <button (click)="create()">Create Vechile</button>
+    <label for=""></label><br> -->
+    <button (click)="create()">Submit</button>
     <!--image,manfacture,model,type,tyres-->
 </form>
 

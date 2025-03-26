@@ -6,7 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class VehicleService {
+  getVechile(id?: number) {
+    throw new Error('Method not implemented.');
+  }
   getData: any;
+  updateVehicle: any;
+  createVehicle: any;
 
   constructor(private _httpClient:HttpClient) { }
 
@@ -35,5 +40,9 @@ export class VehicleService {
 
   createVechile(data:any):Observable<any>{
     return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",data);
+  }
+
+  updateVechile(id:any,data:any):Observable<any>{
+    return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/",+id,data);
   }
 }

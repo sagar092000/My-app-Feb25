@@ -22,10 +22,13 @@ import { CreateVechicleComponent } from './create-vechicle/create-vechicle.compo
 import { StudentCardsComponent } from './student-cards/student-cards.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { ParentComponent } from './parent/parent.component';
 
 
 const routes: Routes = [
-  {path:'dashboard',component:DashboardComponent,children:[
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],children:[
     {path:'welcome',component:WelcomeComponent},
     {path:'calcultor',component:CalcultorComponent},
     {path:'rectangle',component:RectangleComponent},
@@ -44,7 +47,10 @@ const routes: Routes = [
     {path:'create-vechicle',component:CreateVechicleComponent},
     {path:'student-card',component:StudentCardsComponent},
     {path:'create-user',component:CreateUserComponent},
-    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreateVechicleComponent},
+    {path:'sibling1',component:Sibling1Component},
+    {path:'parent',component:ParentComponent}
    
   
   ]},// parent routing

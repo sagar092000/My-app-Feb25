@@ -23,4 +23,24 @@ constructor( private _studentService:StudentService ){
   )
 }
 
+loadStudent(){
+  this._studentService.getStudent().subscribe(
+    (data:any)=>{
+      console.log(data);
+      this.student=data;
+    },(err:any)=>{
+      alert('Internal Server Error..!')
+    }
+  )
+}
+
+delete(id:any){
+  this._studentService.deleteStudent(id).subscribe(
+    (data:any)=>{
+      this.loadStudent();
+    },(err:any)=>{
+      alert('Internal Server Error..!')
+    }
+  )
+}
 }
