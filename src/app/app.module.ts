@@ -33,6 +33,8 @@ import { Sibling2Component } from './sibling2/sibling2.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
+import { CapitalDirectiveDirective } from './capital-directive.directive';
+import { BalancePipe } from './balance.pipe';
 
 
 @NgModule({
@@ -65,7 +67,9 @@ import { RatingComponent } from './rating/rating.component';
     Sibling2Component,
       ParentComponent,
       ChildComponent,
-      RatingComponent
+      RatingComponent,
+      CapitalDirectiveDirective,
+      BalancePipe
    ],
   imports: [
     BrowserModule,
