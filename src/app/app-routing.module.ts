@@ -29,12 +29,12 @@ import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],children:[
+    {path:'home',component:HomeComponent},
     {path:'welcome',component:WelcomeComponent},
     {path:'calcultor',component:CalcultorComponent},
     {path:'rectangle',component:RectangleComponent},
     {path:'cricle',component:CricleComponent},
     {path:'body-mass-weight',component:BmiComponent},
-    {path:'home',component:HomeComponent},
     {path:'sigin',component:SiginComponent},
     {path:'data-binding',component:DataBindingComponent},
     {path:'cel-fa',component:CelFaComponent},
